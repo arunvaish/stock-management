@@ -16,12 +16,7 @@ const Quality: React.FC<QualityProps> = ({ activeSubSection: initialSubSection }
     }
   }, [initialSubSection]);
 
-  const qualityMenuItems = [
-    { id: 'requisition-slip', label: 'Requisition Slip', icon: '🧾' },
-    { id: 'requisition-approval', label: 'Requisition Approval', icon: '✅' },
-    { id: 'prod-material-received', label: 'Production Material Received', icon: '📥' },
-    { id: 'send-to-dispatch', label: 'Material Send to Dispatch', icon: '🚚' },
-  ];
+  // menu items removed to avoid unused variable warning; add back if menu is implemented
 
   const renderRequisitionSlip = () => (
     <RequisitionSlip
