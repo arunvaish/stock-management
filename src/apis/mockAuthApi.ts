@@ -46,7 +46,8 @@ export const mockAuthApi = {
       };
     }
 
-    if (user.password !== credentials.password) {
+    // If password was provided, validate it. If omitted, allow login (bypass mode).
+    if (credentials.password && user.password !== credentials.password) {
       return {
         success: false,
         message: 'Invalid username or password',
