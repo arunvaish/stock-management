@@ -56,65 +56,41 @@
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
-/* Buttons */
+/* Buttons (badge-like) */
 .btn {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 6px;
+  padding: 4px 10px;
+  border: 1px solid #e6e9ef;
+  border-radius: 999px;
   cursor: pointer;
-  font-size: 13px;
-  font-weight: 600;
-  transition: all 0.2s ease;
+  font-size: 12px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 28px;
+  line-height: 1;
+  background: #f8fafc;
+  color: #111827;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: linear-gradient(180deg,#3b82f6,#2563eb);
+  color: #ffffff;
+  border-color: rgba(37,99,235,0.12);
+  box-shadow: 0 2px 6px rgba(37,99,235,0.12);
 }
 
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
-}
+.btn-primary:hover { transform: translateY(-2px); filter: brightness(0.96); box-shadow: 0 8px 24px rgba(37,99,235,0.18); }
 
-.btn-action {
-  padding: 6px 12px;
-  background: #f0f0f0;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 12px;
-  color: #667eea;
-  font-weight: 600;
-  transition: all 0.2s ease;
-  margin-right: 5px;
-}
+.btn-action { padding: 4px 8px; background:#ffffff; border-radius:999px; border:1px solid #eef2f7; color:#4b5563; font-weight:700; }
+.btn-action:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(23,23,23,0.06); }
 
-.btn-action:hover {
-  background: #667eea;
-  color: white;
-  border-color: #667eea;
-}
+.btn-approve { background: linear-gradient(180deg,#22c55e,#16a34a); color:#ffffff; border:1px solid rgba(16,185,129,0.12); box-shadow: 0 2px 6px rgba(16,185,129,0.12); }
+.btn-approve:hover { transform: translateY(-2px); filter:brightness(0.96); box-shadow: 0 8px 24px rgba(16,185,129,0.18); }
 
-.btn-approve {
-  color: #27ae60;
-  border-color: #27ae60;
-}
-
-.btn-approve:hover {
-  background: #27ae60;
-  color: white;
-}
-
-.btn-reject {
-  color: #e74c3c;
-  border-color: #e74c3c;
-}
-
-.btn-reject:hover {
-  background: #e74c3c;
-  color: white;
-}
+.btn-reject { background: linear-gradient(180deg,#ef4444,#dc2626); color:#ffffff; border:1px solid rgba(220,38,38,0.12); box-shadow: 0 2px 6px rgba(220,38,38,0.10); }
+.btn-reject:hover { transform: translateY(-2px); filter:brightness(0.96); box-shadow: 0 8px 24px rgba(220,38,38,0.18); }
 
 /* Table */
 .table-container {
