@@ -25,8 +25,7 @@ const Login: React.FC = () => {
     setServerError('');
     setIsSubmitting(true);
     try {
-      // call login with username only; password is optional
-      await login({ username: data.username });
+      await login({ username: data.username, password: data.password });
       navigate('/dashboard');
     } catch (error) {
       setServerError(error instanceof Error ? error.message : 'Login failed. Please try again.');
@@ -59,7 +58,20 @@ const Login: React.FC = () => {
             {errors.username && <p className="error-text">{errors.username.message}</p>}
           </div>
 
-          {/* Password is optional; hidden to allow username-only login. */}
+          <div className="form-group">
+            <label htmlFor="password" className="form-label">
+              Password
+            </label>
+            <input
+              id="password"
+              type="password"
+              placeholder="Enter your password"
+              className={`form-input ${errors.password ? 'input-error' : ''}`}
+              disabled={isSubmitting}
+              {...register('password')}
+            />
+            {errors.password && <p className="error-text">{errors.password.message}</p>}
+          </div>
 
           <button type="submit" className="submit-button" disabled={isSubmitting}>
             {isSubmitting ? 'Logging in...' : 'Login'}
